@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@500&family=Open+Sans:wght@600&family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fb85432ab6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <div id="clock" class="digital-clock">
+        <span id="clockDisplay">00:00:00</span>
+    </div> 
+    <header class="header">
+        <div class="nav">
+            <div class="headline">
+                <img class="todo-image" src="image2.png">
+                <h1>Task Manager</h1>
+                
+            </div>
+         
+            <div class="nav-items">
+
+                <div class="category-options">
+                    <label>
+                        <input type="radio" name="category" value="work">
+                        <span class="bubble work"></span>
+                        <div>Work</div> 
+                    </label>
+
+                    <label>
+                        <input type="radio" name="category" value="personal">
+                        <span class="bubble personal"></span>
+                        <div>Personal</div> 
+                    </label>
+                </div>
+              
+                <div class="sort-group">
+                    <div class="sort-items">
+                        <div class="sort-icon" id="sort-icon">
+                            <i class="fas fa-sort"></i>
+                        </div>
+                        <!-- <div class="sort-dropdown" id="sort-dropdown"> -->
+                        <select id="sort-select">
+                            <option value="created-newest">Created (Newest First)</option>
+                            <option value="created-oldest">Created (Oldest First)</option>
+                       
+                            <option value="alphabetical-asc">Content (A-Z)</option>
+                            <option value="alphabetical-desc">Content (Z-A)</option>
+                        </select>
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <section class="todo-section container">
+        <h2>Your plan for today?</h2>
+        <form class="form-todo" id="new-todo-form">
+            <input class="todo-input" type="text" name="content" id="content" placeholder="Add your tasks">
+            <input type="datetime-local" id="deadline" name="deadline">
+            <input class="btn" type="submit" value="Add">
+        </form>
+    </section>
+
+    <main>
+        <section class="todo-list">
+            <div class="main-items">
+                <h3>Todo-list</h3>
+
+               
+                <div class="input-group" id="search-group">
+                    <input type="text" id="search" placeholder="Search..." class="search-input"><span
+                        class="input-group-text" id="search-icon"> <i class="fas fa-search"></i> </span>
+                    <div class="filter">
+                        <div class="filter-icon" id="filter-icon"><i class="fas fa-filter"></i></div>
+                        <div class="filter-dropdown" id="filter-dropdown">
+                            <select id="filter-select">
+                                <option value="all">All</option>
+                                <option value="completed">Completed</option>
+                                <option value="incomplete">Incomplete</option>
+                                <option value="personal">Personal</option>
+                                <option value="work">Work</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list" id="todo-list">
+
+                <!-- <div class="todo-item done ">
+               
+                <label >
+                    <input type="radio">
+                    <span class="bubble"></span>
+                </label>
+
+               <div class="todo-content">
+                <input type="text" value="Make a video" readonly class="animate__animated">
+               </div>
+
+                <div class="actions">
+                    <button class="edit"><i class="fa-regular fa-pen-to-square icon"></i></button>
+                    <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+</div> -->
+
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
